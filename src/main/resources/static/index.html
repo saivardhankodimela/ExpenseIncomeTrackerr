@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense and Income Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense and Income Tracker</h1>
+        </header>
+
+        <main>
+            <!-- Expense Form -->
+            <section class="form-section">
+                <h2>Add Expense</h2>
+                <form id="expense-form">
+                    <div class="form-group">
+                        <label for="expense-description">Description:</label>
+                        <input type="text" id="expense-description" name="description" placeholder="Enter expense description" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expense-amount">Amount:</label>
+                        <input type="number" id="expense-amount" name="amount" placeholder="Enter amount" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expense-date">Date:</label>
+                        <input type="date" id="expense-date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expense-category">Category:</label>
+                        <select id="expense-category" name="category" required>
+                            <option value="">--Select Category--</option>
+                            <option value="LABOUR">Labour</option>
+                            <option value="DAILY_EXPENSE">Daily Expense</option>
+                            <option value="MONTHLY">Monthly</option>
+                            <option value="MISCELLANEOUS">Miscellaneous</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Add Expense</button>
+                </form>
+            </section>
+
+            <!-- Income Form -->
+            <section class="form-section">
+                <h2>Add Income</h2>
+                <form id="income-form">
+                    <div class="form-group">
+                        <label for="income-description">Description:</label>
+                        <input type="text" id="income-description" name="description" placeholder="Enter income description" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="income-amount">Amount:</label>
+                        <input type="number" id="income-amount" name="amount" placeholder="Enter amount" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="income-date">Date:</label>
+                        <input type="date" id="income-date" name="date" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Add Income</button>
+                </form>
+            </section>
+
+            <!-- Profit/Loss Calculation -->
+            <section class="form-section">
+                <h2>Calculate Profit/Loss</h2>
+                <form id="profit-loss-form">
+                    <div class="form-group">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" name="startDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end-date">End Date:</label>
+                        <input type="date" id="end-date" name="endDate" required>
+                    </div>
+
+                    <button type="button" onclick="fetchProfitLoss()" class="btn-submit">Get Profit/Loss</button>
+                </form>
+
+                <div class="result-section">
+                    <h3>Result:</h3>
+                    <p id="profit-loss-message">Awaiting input...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Expense Tracker</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
