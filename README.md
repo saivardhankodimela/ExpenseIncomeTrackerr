@@ -9,4 +9,5 @@
 *Start the Application:*
 1. download the jar file from the repo
 2. Open terminal and run command
-   " java -jar jar-file "
+   
+   " java -jar ExpenseIncome-0.0.1-SNAPSHOT.jar "
